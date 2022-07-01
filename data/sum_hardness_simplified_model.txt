@@ -1,0 +1,23 @@
+
+Call:
+lm(formula = Hardness ~ -1 + MCC + RS + OF + MCC:RS + MCC:OF, 
+    data = data_sausage)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.8704 -1.7706 -1.0711  0.7132  7.0898 
+
+Coefficients:
+       Estimate Std. Error t value Pr(>|t|)    
+MCC      54.228      3.655  14.836 5.90e-06 ***
+RS       48.862      3.275  14.921 5.70e-06 ***
+OF       63.002      3.275  19.240 1.28e-06 ***
+MCC:RS  -27.419     16.567  -1.655  0.14899    
+MCC:OF  -71.575     16.506  -4.336  0.00489 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 3.804 on 6 degrees of freedom
+Multiple R-squared:  0.9968,	Adjusted R-squared:  0.9941 
+F-statistic: 368.8 on 5 and 6 DF,  p-value: 2.231e-07
+

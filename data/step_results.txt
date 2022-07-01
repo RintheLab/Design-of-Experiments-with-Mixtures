@@ -1,0 +1,32 @@
+Start:  AIC=36.67
+Hardness ~ -1 + MCC + RS + OF + MCC:RS + RS:OF + MCC:OF + MCC:RS:OF
+
+            Df Sum of Sq    RSS    AIC
+- MCC:RS:OF  1   0.35963 86.722 34.713
+<none>                   86.362 36.667
+
+Step:  AIC=34.71
+Hardness ~ MCC + RS + OF + MCC:RS + RS:OF + MCC:OF - 1
+
+         Df Sum of Sq    RSS    AIC
+- RS:OF   1     0.083  86.81 32.723
+<none>                 86.72 34.713
+- MCC:RS  1    39.709 126.43 36.860
+- MCC:OF  1   271.999 358.72 48.331
+
+Step:  AIC=32.72
+Hardness ~ MCC + RS + OF + MCC:RS + MCC:OF - 1
+
+         Df Sum of Sq    RSS    AIC
+<none>                 86.81 32.723
+- MCC:RS  1    39.629 126.43 34.860
+- MCC:OF  1   272.053 358.86 46.335
+
+Call:
+lm(formula = Hardness ~ MCC + RS + OF + MCC:RS + MCC:OF - 1, 
+    data = data_sausage)
+
+Coefficients:
+   MCC      RS      OF  MCC:RS  MCC:OF  
+ 54.23   48.86   63.00  -27.42  -71.57  
+
